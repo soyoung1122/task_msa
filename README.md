@@ -25,12 +25,14 @@
 
 
 ## 프로젝트
-- msa-sample-gateway
-  + https://github.com/K-PaaS/msa-sample-gateway
-- msa-sample-ui
-  + https://github.com/K-PaaS/msa-sample-ui
 - msa-sample-api
-  + https://github.com/K-PaaS/msa-sample-api
+  + https://github.com/K-PaaS/msa-sample-api.git
+- msa-sample-ui
+  + https://github.com/K-PaaS/msa-sample-ui.git 
+- msa-sample-gateway
+  + https://github.com/K-PaaS/msa-sample-gateway.git
+
+
 
 <br>
 
