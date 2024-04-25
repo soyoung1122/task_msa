@@ -9,16 +9,17 @@
 
 ## 구성도
 <kbd>
-  <img src="https://github.com/K-PaaS/msa-sample-gateway/assets/67575226/d00a1598-3358-4cca-bd42-ce56e15c873a" width="600px">
+  <img src="https://github.com/K-PaaS/msa-sample-gateway/assets/67575226/2541af60-7868-4ef5-9a74-6b7758227b10" width="600px">
 </kbd>
 
 <br><br>
 
-|component|Desc| NodePort |
-|---|---|:--------:|
-|msa-sample-api|Msa Sample API 기능 |  30010   |
-|msa-sample-ui|Msa Sample UI 기능 |  30011   |
-|msa-sample-gateway|Msa Sample API Gateway 기능 |  30012   |
+| component          | Desc                      | NodePort |
+|--------------------|---------------------------|:--------:|
+| msa-sample-api     | Msa Sample API 기능         |  30010   |
+| msa-sample-sd-api  | Msa Sample Side API 기능    |  30014   |
+| msa-sample-ui      | Msa Sample UI 기능          |  30011   |
+| msa-sample-gateway | Msa Sample API Gateway 기능 |  30012   |
 
 <br> 
 <br> 
@@ -27,6 +28,8 @@
 ## 프로젝트
 - msa-sample-api
   + https://github.com/K-PaaS/msa-sample-api.git
+- msa-sample-sd-api
+  + https://github.com/K-PaaS/msa-sample-sd-api.git
 - msa-sample-ui
   + https://github.com/K-PaaS/msa-sample-ui.git 
 - msa-sample-gateway
@@ -56,6 +59,9 @@ kubectl create -f configmap.yml
 > [deployment.yml](api/deployment.yml) <br>
 > [service.yml](api/service.yml)
 
+#### MSA SD-API 배포
+> [deployment.yml](sd-api/deployment.yml) <br>
+> [service.yml](sd-api/service.yml)
 
 #### MSA UI 배포
 > [deployment.yml](ui/deployment.yml) <br>
@@ -69,4 +75,4 @@ kubectl create -f configmap.yml
 
 ## 접속
 Gateway를 통해 UI에 접속한다. <br><br>
-**접속 URL** : `{K8S_MASTER_NODE_IP}:30012/hello` 
+**접속 URL** : `{K8S_MASTER_NODE_IP}:30011/hello` 
