@@ -4,8 +4,8 @@ metadata:
   name: kpaas-msa-configmap
   namespace: default
 data:
-  MSA_API_URL: http://{K8S_MASTER_NODE_IP}:30010
-  MSA_SD_API_URL: http://{K8S_MASTER_NODE_IP}:30014
-  MSA_UI_URL: http://{K8S_MASTER_NODE_IP}:30011
-  MSA_GATEWAY_URL: http://{K8S_MASTER_NODE_IP}:30012
+  MSA_API_URL: http://115.68.198.204:30010
+  MSA_SD_API_URL: http://115.68.198.204:30014
+  MSA_UI_URL: http://115.68.198.204:30011
+  MSA_GATEWAY_URL: http://115.68.198.204:30012
   
