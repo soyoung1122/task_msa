@@ -5,7 +5,7 @@ metadata:
   labels:
     app: task-msa
     tier: backend
-  namespace: default
+  namespace: task
 spec:
   type: NodePort
   selector:
