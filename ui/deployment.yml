@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: task_msa_ui
+  name: task-msa-ui
   labels:
-    app: task_msa
+    app: task-msa
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: task_msa
+      app: task-msa
       tier: backend
   template:
     metadata:
       labels:
-        app: task_msa
+        app: task-msa
         tier: backend
     spec:
       containers:
-        - name: task_msa
+        - name: task-msa
           image: soyoung1122/task_msa_ui:latest
           imagePullPolicy: Always
           resources:
