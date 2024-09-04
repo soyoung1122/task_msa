@@ -1,19 +1,19 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: ${SERVICE_NAME}
+  name: task-msa-sd-api
   labels:
-    app: ${APP_NAME}
+    app: task-msa
     tier: backend
-  namespace: default
+  namespace: task
 spec:
   type: NodePort
   selector:
-    app: ${APP_NAME}
+    app: task-msa
     tier: backend
   ports:
     - protocol: TCP
       port: 8084
       targetPort: 8084
       nodePort: 30014
-      name: ${APP_NAME}
+      name: task-msa
