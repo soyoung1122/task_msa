@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ${DEPLOYMENT_NAME}
+  name: task-msa-gateway
   labels:
-    app: ${APP_NAME}
-  namespace: default
+    app: task-msa
+  namespace: task
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ${APP_NAME}
+      app: task-msa
       tier: backend
   template:
     metadata:
       labels:
-        app: ${APP_NAME}
+        app: task-msa
         tier: backend
     spec:
       containers:
-        - name: ${APP_NAME}
-          image: ${IMAGE}:${BEFOREJOB_BUILD_NUMBER}
+        - name: task-msa
+          image: soyoung1122/task_msa_gateway:latest
           imagePullPolicy: Always
           resources:
             requests:
@@ -34,4 +34,4 @@ spec:
             - configMapRef:
                 name: kpaas-msa-configmap
       imagePullSecrets:
-        - name: ${SECRET_NAME}
+        - name: dockerkhub
