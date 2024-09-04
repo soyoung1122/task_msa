@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: kpaas-msa-configmap
-  namespace: default
+  namespace: task
 data:
   MSA_API_URL: http://115.68.198.204:30010
   MSA_SD_API_URL: http://115.68.198.204:30014
