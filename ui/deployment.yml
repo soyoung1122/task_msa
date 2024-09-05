@@ -1,6 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  annotations:
+    argocd-update-time: "Thu Sep  5 07:42:49 UTC 2024"
   name: task-msa-ui
   labels:
     app: task-msa
