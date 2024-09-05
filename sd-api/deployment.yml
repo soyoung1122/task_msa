@@ -34,4 +34,4 @@ spec:
             - configMapRef:
                 name: kpaas-msa-configmap
       imagePullSecrets:
-        - name: task-msa
+        - name: dockerhub
