@@ -1,8 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    argocd-update-time: Fri Sep  6 06:51:16 UTC 2024
   name: spring-music
   labels:
     app: music
@@ -14,6 +12,8 @@ spec:
       app: music
   template:
     metadata:
+      annotations:
+        argocd-update-time: Fri Sep  6 06:51:16 UTC 2024
       labels:
         app: music
     spec:
