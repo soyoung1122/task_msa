@@ -13,7 +13,7 @@ spec:
   template:
     metadata:
       annotations:
-        argocd-update-time: Tue Oct 15 05:12:01 UTC 2024
+        argocd-update-time: Thu Oct 17 05:15:41 UTC 2024
       labels:
         app: music
     spec:
