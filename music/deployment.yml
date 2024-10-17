@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: spring-music
-          image: kps-container-registry.ncr.gov-ntruss.com/spring-music:latest
+          image: kps-container-registry.ncr.gov-ntruss.com/spring-music:
           imagePullPolicy: Always
           resources:
             requests:
