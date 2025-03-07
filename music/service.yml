@@ -4,7 +4,6 @@ metadata:
   name: spring-music
   labels:
     app: music
-  namespace: kps
 spec:
   type: NodePort
   selector:
