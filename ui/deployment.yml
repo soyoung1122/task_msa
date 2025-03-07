@@ -4,7 +4,6 @@ metadata:
   name: task-msa-ui
   labels:
     app: task-msa
-  namespace: task
 spec:
   replicas: 1
   selector:
