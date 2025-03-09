@@ -8,9 +8,9 @@ spec:
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
-  storageClassName: standard
+  storageClassName: ""
   hostPath:
-    path: /mnt/data/mariadb
+    path: /mnt/data/mariadb-fresh
     type: DirectoryOrCreate
 
 ---
@@ -25,4 +25,6 @@ spec:
   resources:
     requests:
       storage: 10Gi
-  storageClassName: standard
+  volumeName: mariadb-pv
+  storageClassName: ""
+

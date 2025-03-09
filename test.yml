@@ -35,12 +35,22 @@ spec:
         ports:
         - containerPort: 3306
           name: mariadb
+        volumeMounts:
+        - name: mariadb-persistent-storage
+          mountPath: /docker-entrypoint-initdb.d
         env:
         - name: MYSQL_ROOT_PASSWORD
-          value: "openlab"  # 직접 문자열로 지정
+          value: "openlab" 
         - name: MYSQL_DATABASE
           value: "openlab"
         - name: MYSQL_USER
           value: "admin"
         - name: MYSQL_PASSWORD
-          value: "openlab"
+          valueFrom:
+            secretKeyRef:
+              name: mariadb-secret
+              key: DB_PASSWORD
+      volumes:
+      - name: mariadb-persistent-storage
+        configMap:
+          name: mariadb-initdb-config

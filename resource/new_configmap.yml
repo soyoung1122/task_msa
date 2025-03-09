@@ -13,11 +13,16 @@ data:
       data1 VARCHAR(256),
       data2 VARCHAR(256)
     );
-    INSERT INTO name_data (data1, data2) VALUES ('K-PaaS is an open cloud platform created through ', 'developed countries');
+    
+    INSERT INTO name_data (data1, data2) VALUES 
+    ('K-PaaS is an open cloud platform created through', 
+    'developed countries are paying attention to the cloud market,');
     
     CREATE TABLE IF NOT EXISTS title_data (
       no INT AUTO_INCREMENT PRIMARY KEY,
       data1 VARCHAR(256),
       data2 VARCHAR(256)
     );
-    INSERT INTO title_data (data1, data2) VALUES ('Container Platform', 'Application Platform');
+    
+    INSERT INTO title_data (data1, data2) VALUES 
+    ('Container Platform', 'Application Platform');
