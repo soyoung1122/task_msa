@@ -4,7 +4,6 @@ metadata:
   name: task-msa-api
   labels:
     app: task-msa
-  namespace: task
 spec:
   replicas: 1
   selector:
@@ -35,5 +34,5 @@ spec:
           envFrom:
             - configMapRef:
                 name: kpaas-msa-configmap
-      imagePullSecrets:
-        - name: dockerhub
+	    - secretRef:
+                name: mariadb-secret
